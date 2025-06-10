@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sasan Eftekhar Data Analyst Showcase weblog Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .libraries {
+            font-style: normal;
+            font-weight: bold;
+            color: grey;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            box-sizing: border-box;
+        }
+        .project-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            overflow: visible;
+            padding: 0;
+            margin: 0;
+        }
+        .project-images img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 0.5rem;
+        }
+        .bg-white {
+            overflow: visible;
+        }
+        .nav-menu {
+            display: flex;
+        }
+        .nav-menu.hidden {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            .nav-menu.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 4rem;
+                left: 0;
+                right: 0;
+                background: #1f2937;
+                padding: 1rem;
+            }
+            .project-images {
+                grid-template-columns: 1fr;
+            }
+            .project-images img {
+                width: 100%;
+                max-width: 100%;
+                object-fit: contain;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <!-- Header -->
+    <header class="bg-gray-800 text-white py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Data Analyst Portfolio Showcase - Sasan Eftekhar</h1>
+            <div class="flex items-center">
+                <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav class="nav-menu hidden md:flex space-x-4">
+                <a href="#sql" class="hover:text-blue-400">SQL Projects</a>
+                <a href="#python" class="hover:text-blue-400">Python Projects</a>
+                <a href="#powerbi" class="hover:text-blue-400">PowerBI Projects</a>
+                <a href="#capstone" class="hover:text-blue-400">Capstone Project</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- PowerBI Projects -->
+        <section id="powerbi" class="mb-12">
+            <h2 class="text-3xl font-semibold mb-4">Microsoft PowerBI</h2>
+            <div class="grid grid-cols-1 gap-6">
+                <!-- PowerBI Project 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md w-full">
+                    <h3 class="text-xl font-bold mb-2">Adventure Works</h3>
+                    <p class="text-gray-700 mb-4">
+                        This project features four interactive dashboards for detailed business analysis. 
+                        Each dashboard includes key performance indicators (KPIs) and various business statistics calculations. 
+                        Additionally, it includes a toggle bar for easy navigation between different sheets.
+                    </p>
+                    <div class="project-images grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="text-center">
+                            <img src="./adventureWorks-exec-dashboard.png" alt="PowerBI Chart 1" class="rounded mb-2">
+                            <p class="text-gray-700 text-sm">Executive dashboard</p>
+                        </div>
+                        <div class="text-center">
+                            <img src="./adventureWorks-Map.png" alt="PowerBI Chart 2" class="rounded mb-2">
+                            <p class="text-gray-700 text-sm">Map</p>
+                        </div>
+                        <div class="text-center">
+                            <img src="./adventureWorks-customer-details.png" alt="PowerBI Chart 3" class="rounded mb-2">
+                            <p class="text-gray-700 text-sm">customer Detail</p>
+                        </div>
+                        <div class="text-center">
+                            <img src="./adventureWorks-product-details.png" alt="PowerBI Chart 4" class="rounded mb-2">
+                            <p class="text-gray-700 text-sm">Product Details</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- PowerBI Project 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md w-full">
+                    <h3 class="text-xl font-bold mb-2">Market Analysis</h3>
+                    <p class="text-gray-700 mb-4">
+                      Using market-related data to define KPIs and analyze profit, return, and revenue for Maven Market. 
+                      The project compares and visualizes values over selected time periods to derive insights into market 
+                      performance.
+                    </p>
+                    <div class="project-images">
+                        <img src="./maven market.png" alt="PowerBI Project 2 Image 1" class="rounded">
+                        <img src="./maven market 2.png" alt="PowerBI Project 2 Image 2" class="rounded">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Python Projects -->
+        <section id="python" class="mb-12">
+            <h2 class="text-3xl font-semibold mb-4">Python</h2>
+            <div class="grid grid-cols-1 gap-6">
+                <!-- Python Project 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md w-full">
+                    <h3 class="text-xl font-bold mb-2">Demographic Analysis</h3>
+                    <h4 class="libraries">Used Libraries: pandas, datetime, matplotlib, seaborn, numpy</h4>
+                    <p class="text-gray-700 mb-4">
+                        This project analyzes demographics in relation to market behavior and 
+                        transactions. Various programming and analytical methods were used to 
+                        join, filter, and aggregate the data, enabling effective visualization 
+                        and extraction of business insights.
+
+                        <ul><strong>Key Objectives</strong></ul>
+                        <li>Read in data from multiple csv files</li>
+                        <li>Explore the data (millions of rows!)</li>
+                        <li>Join multiple DataFrames</li>
+                        <li>Create new columns to aid in analysis</li>
+                        <li>Filter, sort, and aggregate the data to pinpoint and summarize important information</li>
+                        <li>Work with datetime fields to analyze time series</li>
+                        <li>Build plots to communicate key insights</li>
+                        <li>Optimize the import workflow</li>
+                        <li>Write out summary tables for stakeholders</li>
+                    </p>
+                    <div class="project-images">
+                        <img src="./demographic_highest_sales_heatmap.jpeg" alt="Python Project 1 Image 1" class="rounded">
+                        <img src="./demog-income_sales.jpeg" alt="Python Project 1 Image 2" class="rounded">
+                    </div>
+                </div>
+                <!-- Python Project 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md w-full">
+                    <h3 class="text-xl font-bold mb-2">Coffee Production Analysis and dashboard</h3>
+                    <h4 class="libraries">Used Libraries: pandas, matplotlib, numpy</h4>
+                    <p class="text-gray-700 mb-4">
+                        This project analyzes global coffee production and addresses key questions through various stages of data analysis.
+                    </p>
+                    <p><strong>Key Objectives:</strong></p>
+                    <ul>
+                      <li>Read data from multiple CSV files</li>
+                      <li>Reshape and prepare the data for visualization</li>
+                    </ul>
+                    <br>
+                    <p><strong>Analyses and Questions Addressed:</strong></p>
+                    <ul>
+                      <li>Analysis 1: Coffee production trends</li>
+                      <li>Analysis 2: Coffee import patterns</li>
+                      <li>
+                        Analysis 3: Coffee prices in conjunction with consumption
+                        <ul>
+                          <li>Which importing countries consume the most coffee?</li>
+                          <li>In which countries are the highest coffee prices paid?</li>
+                          <li>Can we increase profit margins by targeting specific export countries?</li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <br>
+                    <div class="project-images">
+                        <img src="./cofee-brazil stats.png" alt="Python Project 2 Image 1" class="rounded">
+                        <img src="./coffee- share of global production.jpg" alt="Python Project 2 Image 2" class="rounded">
+                    </div>
+                </div>
+                <!-- Python Project 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md w-full">
+                    <h3 class="text-xl font-bold mb-2">United States Used Cars analysis</h3>
+                    <h4 class="libraries">Used Libraries: pandas, matplotlib, seaborn, numpy</h4>
+                    <p class="text-gray-700 mb-4">
+                        This project analyzes an extensive real-world dataset on used cars in the United States, 
+                        uncovering key market insights through data visualization. 
+                        It includes statistical analysis of specific market segments to highlight trends and patterns.
+                    </p>
+                    <ul><strong>Key Objectives:</strong></ul>
+                    <li>read and manipulate data with pandas</li>
+                    <li>Build Summary charts with matplotlib and seaborn</li>
+                    <li>leverage seaborn advanced chart types to mine insights from the data and make a decision</li>
+                    <br>
+                    <div class="project-images">
+                        <img src="./cars-sellingprice by make and quality.jpg" alt="Python Project 3 Image 1" class="rounded">
+                        <img src="./cars-body_types.jpg" alt="Python Project 3 Image 2" class="rounded">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SQL Projects -->
+        <section id="sql" class="mb-12">
+            <h2 class="text-3xl font-semibold mb-4">MySQL</h2>
+            <div class="grid grid-cols-1 gap-6">
+                <!-- SQL Project 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md w-full">
+                    <h3 class="text-xl font-bold mb-2">Baseball Major League Analysis</h3>
+                    <p class="text-gray-700 mb-4">
+                        This project involves advanced SQL analysis of the US Baseball Major League, divided into four parts:
+                        <ul>
+                            <li>Part 1: School Analysis</li>
+                            <li>Part 2: Salary Analysis</li>
+                            <li>Part 3: Player Career Analysis</li>
+                            <li>Part 4: Player Comparison Analysis</li>
+                        </ul> 
+                        <br>
+                        Below you can see two examples of queries used in the mentioned analysis:
+                    </p>
+                    <div class="project-images">
+                        <img src="./major league 1.png" alt="Major League Baseball Analysis Image 1" class="rounded">
+                        <img src="./major league 2.png" alt="Major League Baseball Analysis Image 2" class="rounded">
+                    </div>
+                </div>
+                <!-- SQL Project 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md w-full">
+                    <h3 class="text-xl font-bold mb-2">Maven Movies Analysis</h3>
+                    <p class="text-gray-700 mb-4">
+                        This project uses SQL to extract and analyze key business insights based on the data requests from the business owner. The analysis covers:
+                        <ul>
+                            <li>Inventory management</li>
+                            <li>In-store sales and comparative analysis</li>
+                            <li>Customer behavior and segmentation</li>
+                            <li>Calculation of key statistical metrics</li>
+                        </ul>
+                        <br>
+                        Below you can see some examples of the queries used in the script
+                    </p>
+                    <div class="project-images">
+                        <img src="./movie-store 1.png" alt="SQL Project 2 Image 1" class="rounded">
+                        <img src="./movie-store 2.png" alt="SQL Project 2 Image 2" class="rounded">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Capstone Project -->
+        <section id="capstone" class="mb-12">
+            <h2 class="text-3xl font-semibold mb-4">Capstone Project</h2>
+            <h4 class="libraries">Used Technologies: Python, Tableau, PostgreSQL</h4>
+            <div class="grid grid-cols-1 gap-6">
+                <!-- Capstone Project -->
+                <div class="bg-white p-6 rounded-lg shadow-md w-full">
+                    <h3 class="text-xl font-bold mb-2">Capstone Project</h3>
+                    <h2 class="libraries">Highlights: python / pandas / matplotlib / tableau / API / GitHub / google slides / DBeaver / Visual Studio code</h2>
+                    <p class="text-gray-700 mb-4">
+                        <strong>"Unveiling the organic evolution: a deep dive into EU food trends"</strong>
+                    </p>
+                    <p>
+                      <h3><strong>Summary: </strong>We investigated the development of the organic food market in the European Union from 2011 to 2024</h3>
+                      <br>
+                    </p>
+                    <div class="project-images">
+                        <img src="./capstone-presentation.png" alt="Capstone Presentation" class="rounded mb-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <img src="./capstone-price-premia.png" alt="Capstone Project Image 1" class="rounded">
+                            <img src="./capstone-market-share.jpg" alt="Capstone Project Image 2" class="rounded">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2025 My Data Science Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
